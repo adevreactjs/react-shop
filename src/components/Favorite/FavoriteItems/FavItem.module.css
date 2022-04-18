@@ -1,0 +1,68 @@
+.cardBlock {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 29px 34px 30px;
+  width: 210px;
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  border-radius: 40px;
+}
+.cardBlock:hover {
+  box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+}
+.cardImg {
+  position: relative;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.cardImg img {
+  margin: 0 auto;
+  width: 110px;
+  height: 133px;
+}
+.likeBtn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 7px;
+  z-index: 2;
+}
+.likeBtn img {
+  width: 32px;
+  height: 32px;
+}
+
+.cardTitle {
+  flex-grow: 1;
+  margin-bottom: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.priceLabel {
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.priceCount {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
+.addBtn {
+  background: #ffffff;
+}

@@ -1,0 +1,55 @@
+.header {
+  padding: 43px 45px 45px 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+}
+
+.logoBlock img {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+}
+
+.logoLabel h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.logoLabel h2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9d9d9d;
+}
+.iconBlock {
+  display: flex;
+  align-items: center;
+}
+
+.cartBlock {
+  cursor: pointer;
+  margin-right: 30px;
+  display: flex;
+}
+
+.cartBlock img {
+  margin-right: 10px;
+  width: 18px;
+  height: 17px;
+}
+.price {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5c5c5c;
+}
+.like {
+  margin-right: 30px;
+}
