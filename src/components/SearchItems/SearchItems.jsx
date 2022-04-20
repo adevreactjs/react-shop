@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { storeItems, searchProduct } from '../store/magazinSlice';
+import { searchProduct } from '../store/magazinSlice';
 
 import classes from './SearchItems.module.css';
 import searchIcon from '../../img/search-icon.svg';
