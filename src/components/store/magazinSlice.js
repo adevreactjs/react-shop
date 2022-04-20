@@ -5,9 +5,15 @@ const initialState = {
   items: [],
   searchValue: [],
   stateCard: false,
+  stateBtnOrder: false,
   stateBtnProduct: null,
   cardItems: [],
   favoriteItems: [],
+  token: '',
+  userName: {
+    username: "mor_23141",
+    password: "83r5^_1"
+},
   loading: true,
   status: null,
   error: null,
@@ -15,6 +21,10 @@ const initialState = {
 
 export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
   const response = await ProductService.postItems();
+  return response;
+});
+export const auth = createAsyncThunk('token/auth', async () => {
+  const response = await ProductService.getToken(initialState.userName);
   return response;
 });
 
@@ -25,6 +35,9 @@ const storeItems = createSlice({
     addBtnState(state, action) {
       state.stateBtnProduct = action.payload;
     },
+    offBtnItems(state, action) {
+      state.stateBtnOrder = action.payload;
+    },
 
     clickedCard(state, action) {
       state.stateCard = action.payload;
@@ -33,9 +46,13 @@ const storeItems = createSlice({
     addInCard(state, action) {
       state.cardItems.push(action.payload);
     },
+    clearCard(state, action) {
+      state.cardItems = action.payload
+    },
     addFavoriteItems(state, action) {
       state.favoriteItems.push(action.payload);
     },
+
     isLoadingItems(state, action) {
       state.loading = action.payload;
     },
@@ -52,6 +69,9 @@ const storeItems = createSlice({
     searchProduct(state, action) {
       state.searchValue = action.payload;
     },
+    sortPrice(state, action) {
+      state.items = action.payload;
+    },
   },
   extraReducers: {
     [fetchItems.pending]: (state) => {
@@ -64,6 +84,18 @@ const storeItems = createSlice({
       state.loading = false
     },
     [fetchItems.rejected]: (state, action) => {},
+    
+    [auth.pending]: (state) => {
+      state.status = 'loading';
+      state.error = null;
+    },
+
+    [auth.fulfilled]: (state, action) => {
+      state.status = 'resolved';
+      state.token = action.payload;
+      state.loading = false
+    },
+    [auth.rejected]: (state, action) => {},
   },
 });
 
@@ -77,5 +109,8 @@ export const {
   filtFavoriteItems,
   changeLikeBtnState,
   isLoadingItems,
+  clearCard,
+  offBtnItems,
+  sortPrice,
 } = storeItems.actions;
 export default storeItems.reducer;

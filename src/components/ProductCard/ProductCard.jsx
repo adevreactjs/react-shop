@@ -4,16 +4,16 @@ import cardLike from '../../img/fav.svg';
 import addBtn from '../../img/addBtn.svg';
 import clickBtn from '../../img/clickAdd.svg';
 import offLike from '../../img/offLike.svg';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {
-  addBtnState, addFavoriteItems
+  addBtnState, offBtnItems
  
 } from '../store/magazinSlice';
 
 export default function ({ items, getCard, addStateBtn, addTofav }) {
   const [add, setAddBtn] = React.useState(false);
   const [likeBtn, setOffBtn] = React.useState(false);
-
+  const orderState = useSelector((state) => state.getProduct.stateBtnOrder)
 
   const dispatch = useDispatch();
 
@@ -34,6 +34,13 @@ export default function ({ items, getCard, addStateBtn, addTofav }) {
       setAddBtn(false);
     }
   }, [addStateBtn]);
+
+  useEffect(() => {
+    if (orderState) {
+      console.log('t');
+      setAddBtn(false);
+    }
+  }, [orderState]);
 
   return (
     <>

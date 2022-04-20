@@ -1,5 +1,5 @@
 .cartBlock {
-    visibility: hidden;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -9,10 +9,8 @@
   z-index: 2;
 }
 .active {
-    visibility: visible;
-    transition: all 1s ease-out;
-
-
+  visibility: visible;
+  transition: all 1s ease-out;
 }
 .cart {
   position: absolute;
@@ -37,7 +35,6 @@
   display: flex;
   flex-direction: column;
   height: 90%;
-
 }
 .cartItem {
   overflow: scroll;
@@ -86,4 +83,11 @@
 }
 .cartBtn img {
   margin-left: 40px;
+}
+.done {
+  display: block;
+  height: 100%;
+}
+.done.hidden {
+  display: none;
 }
