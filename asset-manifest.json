@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/magazin/static/css/main.80a5b8d8.css",
-    "main.js": "/magazin/static/js/main.fd39e627.js",
-    "static/js/787.49365e45.chunk.js": "/magazin/static/js/787.49365e45.chunk.js",
-    "static/media/finish.png": "/magazin/static/media/finish.28c53daaf8eec94f5429.png",
-    "static/media/smile.svg": "/magazin/static/media/smile.ca2e2bdf7fbc16041501cc9065413063.svg",
-    "static/media/logo.svg": "/magazin/static/media/logo.c891413d618d8aa309b6bd5a0ddc8188.svg",
-    "static/media/clickAdd.svg": "/magazin/static/media/clickAdd.890c21e6e092e231b04d7f8d3b23767a.svg",
-    "static/media/offLike.svg": "/magazin/static/media/offLike.dbddb85a65c80405e2d8ac198b59ea70.svg",
-    "static/media/like.svg": "/magazin/static/media/like.31c528b014374dd8bafb45d68779796e.svg",
-    "static/media/fav.svg": "/magazin/static/media/fav.553d151b49e111459401445d4a6d4f19.svg",
-    "static/media/person.svg": "/magazin/static/media/person.381202f7e3edbc1a00b14fbd5e529a32.svg",
-    "static/media/cart.svg": "/magazin/static/media/cart.5113b08fb682dc25f3856ef704a6c05d.svg",
-    "index.html": "/magazin/index.html",
-    "static/media/search-icon.svg": "/magazin/static/media/search-icon.48c52bf5d459537e27c07f88eb08c050.svg",
-    "static/media/closeBtn.svg": "/magazin/static/media/closeBtn.b1fef0aa93fbf25374f4991d23f900d8.svg",
-    "static/media/addBtn.svg": "/magazin/static/media/addBtn.b88e94c67ea7ac0cfa69033241c96b8c.svg",
-    "static/media/arrow.svg": "/magazin/static/media/arrow.fc3222511ec5a224a4abf3bbf4c2566f.svg",
-    "main.80a5b8d8.css.map": "/magazin/static/css/main.80a5b8d8.css.map",
-    "main.fd39e627.js.map": "/magazin/static/js/main.fd39e627.js.map",
-    "787.49365e45.chunk.js.map": "/magazin/static/js/787.49365e45.chunk.js.map"
+    "main.css": "/react-shop/static/css/main.80a5b8d8.css",
+    "main.js": "/react-shop/static/js/main.68d90d4f.js",
+    "static/js/787.affa5bbf.chunk.js": "/react-shop/static/js/787.affa5bbf.chunk.js",
+    "static/media/finish.png": "/react-shop/static/media/finish.28c53daaf8eec94f5429.png",
+    "static/media/smile.svg": "/react-shop/static/media/smile.ca2e2bdf7fbc16041501cc9065413063.svg",
+    "static/media/logo.svg": "/react-shop/static/media/logo.c891413d618d8aa309b6bd5a0ddc8188.svg",
+    "static/media/clickAdd.svg": "/react-shop/static/media/clickAdd.890c21e6e092e231b04d7f8d3b23767a.svg",
+    "static/media/offLike.svg": "/react-shop/static/media/offLike.dbddb85a65c80405e2d8ac198b59ea70.svg",
+    "static/media/like.svg": "/react-shop/static/media/like.31c528b014374dd8bafb45d68779796e.svg",
+    "static/media/fav.svg": "/react-shop/static/media/fav.553d151b49e111459401445d4a6d4f19.svg",
+    "static/media/person.svg": "/react-shop/static/media/person.381202f7e3edbc1a00b14fbd5e529a32.svg",
+    "static/media/cart.svg": "/react-shop/static/media/cart.5113b08fb682dc25f3856ef704a6c05d.svg",
+    "index.html": "/react-shop/index.html",
+    "static/media/search-icon.svg": "/react-shop/static/media/search-icon.48c52bf5d459537e27c07f88eb08c050.svg",
+    "static/media/closeBtn.svg": "/react-shop/static/media/closeBtn.b1fef0aa93fbf25374f4991d23f900d8.svg",
+    "static/media/addBtn.svg": "/react-shop/static/media/addBtn.b88e94c67ea7ac0cfa69033241c96b8c.svg",
+    "static/media/arrow.svg": "/react-shop/static/media/arrow.fc3222511ec5a224a4abf3bbf4c2566f.svg",
+    "main.80a5b8d8.css.map": "/react-shop/static/css/main.80a5b8d8.css.map",
+    "main.68d90d4f.js.map": "/react-shop/static/js/main.68d90d4f.js.map",
+    "787.affa5bbf.chunk.js.map": "/react-shop/static/js/787.affa5bbf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80a5b8d8.css",
-    "static/js/main.fd39e627.js"
+    "static/js/main.68d90d4f.js"
   ]
 }
