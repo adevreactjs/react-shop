@@ -11,7 +11,7 @@ const EmptyFav = () => {
       <img className={cl.smileIcon} src={smile} alt='smile' />
       <h2>Закладок нет :(</h2>
       <p>Вы ничего не добавляли в закладки</p>
-      <Link to='/magazin'>
+      <Link to='/react-shop'>
         <button className={cl.btn}>
           <img src={leftArrow} alt='leftArrow' />
           Вернуться назад

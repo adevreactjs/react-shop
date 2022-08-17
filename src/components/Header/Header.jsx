@@ -31,21 +31,21 @@ export default function Header() {
   return (
     <div>
       <div className={classes.header}>
-       <Link to='/magazin'>
-        <div className={classes.logoBlock}>
+        <Link to='/react-shop'>
+          <div className={classes.logoBlock}>
             <img src={logo} alt='logo' />
             <div className={classes.logoLabel}>
               <h1>Magazin</h1>
               <h2>Лучший магазин</h2>
             </div>
-        </div>
+          </div>
         </Link>
         <div className={classes.iconBlock}>
           <div onClick={clickCard} className={classes.cartBlock}>
             <img src={cart} alt='cart' />
             <div className={classes.price}>{sumCart} грн.</div>
           </div>
-          <Link to='/magazin/favorite'>
+          <Link to='/react-shop/favorite'>
             <img className={classes.like} src={like} alt='like' />
           </Link>
           <img src={person} alt='person' />
