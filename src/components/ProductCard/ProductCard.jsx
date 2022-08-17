@@ -5,15 +5,12 @@ import addBtn from '../../img/addBtn.svg';
 import clickBtn from '../../img/clickAdd.svg';
 import offLike from '../../img/offLike.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  addBtnState, offBtnItems
- 
-} from '../store/magazinSlice';
+import { addBtnState, offBtnItems } from '../store/magazinSlice';
 
 export default function ({ items, getCard, addStateBtn, addTofav }) {
   const [add, setAddBtn] = React.useState(false);
   const [likeBtn, setOffBtn] = React.useState(false);
-  const orderState = useSelector((state) => state.getProduct.stateBtnOrder)
+  const orderState = useSelector(state => state.getProduct.stateBtnOrder);
 
   const dispatch = useDispatch();
 
@@ -27,7 +24,6 @@ export default function ({ items, getCard, addStateBtn, addTofav }) {
     addTofav(items);
     setOffBtn(!likeBtn);
   }
-  
 
   useEffect(() => {
     if (addStateBtn === items.id) {
@@ -37,22 +33,21 @@ export default function ({ items, getCard, addStateBtn, addTofav }) {
 
   useEffect(() => {
     if (orderState) {
-      console.log('t');
       setAddBtn(false);
     }
   }, [orderState]);
 
   return (
     <>
-      {(
+      {
         <div className={classes.cardBlock}>
           <div className={classes.cardImg}>
-            <img src={items.image} alt="imgProduct" />
+            <img src={items.image} alt='imgProduct' />
             <button onClick={offLikeClick} className={classes.likeBtn}>
               {likeBtn ? (
-                <img src={cardLike} alt="cardLike" />
+                <img src={cardLike} alt='cardLike' />
               ) : (
-                <img src={offLike} alt="cardLike" />
+                <img src={offLike} alt='cardLike' />
               )}
             </button>
           </div>
@@ -63,11 +58,11 @@ export default function ({ items, getCard, addStateBtn, addTofav }) {
               <div className={classes.priceCount}>{Math.round(items.price)} грн.</div>
             </div>
             <button onClick={addClick} className={classes.addBtn}>
-              {add ? <img src={clickBtn} alt="addBtn" /> : <img src={addBtn} alt="clickBtn" />}
+              {add ? <img src={clickBtn} alt='addBtn' /> : <img src={addBtn} alt='clickBtn' />}
             </button>
           </div>
         </div>
-      )}
+      }
     </>
   );
 }

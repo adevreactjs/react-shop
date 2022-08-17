@@ -8,12 +8,12 @@ import leftArrow from '../../../img/leftArrow.png';
 const EmptyFav = () => {
   return (
     <div className={cl.smile}>
-      <img className={cl.smileIcon} src={smile} alt="smile" />
+      <img className={cl.smileIcon} src={smile} alt='smile' />
       <h2>Закладок нет :(</h2>
       <p>Вы ничего не добавляли в закладки</p>
-      <Link to='/'>
+      <Link to='/magazin'>
         <button className={cl.btn}>
-          <img src={leftArrow} alt="leftArrow" />
+          <img src={leftArrow} alt='leftArrow' />
           Вернуться назад
         </button>
       </Link>

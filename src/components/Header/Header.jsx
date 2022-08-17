@@ -10,7 +10,7 @@ import { clickedCard } from '../store/magazinSlice';
 
 export default function Header() {
   const [sumCart, setSumCart] = React.useState(0);
-  const cardItems = useSelector((state) => state.getProduct.cardItems);
+  const cardItems = useSelector(state => state.getProduct.cardItems);
 
   const dispath = useDispatch();
 
@@ -31,24 +31,24 @@ export default function Header() {
   return (
     <div>
       <div className={classes.header}>
+       <Link to='/magazin'>
         <div className={classes.logoBlock}>
-          <Link to="/">
-            <img src={logo} alt="logo" />
-          </Link>
-          <div className={classes.logoLabel}>
-            <h1>Magazin</h1>
-            <h2>Лучший магазин</h2>
-          </div>
+            <img src={logo} alt='logo' />
+            <div className={classes.logoLabel}>
+              <h1>Magazin</h1>
+              <h2>Лучший магазин</h2>
+            </div>
         </div>
+        </Link>
         <div className={classes.iconBlock}>
           <div onClick={clickCard} className={classes.cartBlock}>
-            <img src={cart} alt="cart" />
+            <img src={cart} alt='cart' />
             <div className={classes.price}>{sumCart} грн.</div>
           </div>
-          <Link to="/favorite">
-            <img className={classes.like} src={like} alt="like" />
+          <Link to='/magazin/favorite'>
+            <img className={classes.like} src={like} alt='like' />
           </Link>
-          <img src={person} alt="person" />
+          <img src={person} alt='person' />
         </div>
       </div>
     </div>

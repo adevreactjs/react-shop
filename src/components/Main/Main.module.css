@@ -97,7 +97,6 @@
     border-radius: 20px;
   }
   .container {
-    max-width: 960px;
     padding: 20px 60px;
   }
 
@@ -112,6 +111,16 @@
       max-width: none;
       margin: 0 auto;
     }
+    .container {
+      padding: 10px;
+    }
+    .filterBlock {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      
+    }
+   
   }
   .line {
     border-bottom: 1px solid #EAEAEA;

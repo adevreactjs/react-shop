@@ -12,9 +12,8 @@ function App() {
   return (
     <div>
       <Routes>
-      <Route path="/" element={<Main/>} />
-      <Route path="/favorite" element={<Favorite/>} />
-      
+        <Route path='/magazin' element={<Main />} />
+        <Route path='/magazin/favorite' element={<Favorite />} />
       </Routes>
     </div>
   );
