@@ -1,15 +1,13 @@
 import React from 'react';
 import Header from '../../Header/Header';
-import ProductCard from '../../ProductCard/ProductCard';
 import classes from './FavoriteItems.module.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { filtFavoriteItems } from '../../store/magazinSlice';
 import FavItem from './FavItem';
 import Cart from '../../Cart/Cart';
 import EmptyFav from '../../Cart/EmptyFav/EmptyFav';
 
 const FavoriteItems = ({ favItems }) => {
-  const items = useSelector((state) => state.getProduct.items);
   const dispatch = useDispatch();
 
   function removeFavItem(item) {
@@ -27,7 +25,7 @@ const FavoriteItems = ({ favItems }) => {
         {favItems.length === 0 ? (
           <EmptyFav />
         ) : (
-          favItems.map((obj) => <FavItem key={obj.id} items={obj} removeFavItems={removeFavItem} />)
+          favItems.map(obj => <FavItem key={obj.id} items={obj} removeFavItems={removeFavItem} />)
         )}
       </div>
       <Cart />

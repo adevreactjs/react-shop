@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import classes from './Cart.module.css';
 import CartItem from './CartItem/CartItem';
 import arrowImg from '../../img/arrow.svg';
@@ -8,8 +8,8 @@ import EmptyCart from './EmptyCart/EmptyCart';
 import FinishOrder from './FinishOrder/FinishOrder';
 
 const Cart = () => {
-  const stateCard = useSelector((state) => state.getProduct.stateCard);
-  const cardItems = useSelector((state) => state.getProduct.cardItems);
+  const stateCard = useSelector(state => state.getProduct.stateCard);
+  const cardItems = useSelector(state => state.getProduct.cardItems);
   const dispatch = useDispatch();
   const [sumItems, setSumItems] = React.useState(0);
   const [doneOrder, setDoneOrders] = React.useState(false);
@@ -31,7 +31,7 @@ const Cart = () => {
     dispatch(clickedCard(false));
     dispatch(clearCard([]));
     dispatch(offBtnItems([]));
-    setDoneOrders(false)
+    setDoneOrders(false);
   }
 
   let sumInCart = function sumItems(cardItems) {
@@ -41,19 +41,17 @@ const Cart = () => {
   };
 
   function clickedOrderDone() {
-    dispatch(offBtnItems(true))
+    dispatch(offBtnItems(true));
     setDoneOrders(!doneOrder);
-
   }
 
   useEffect(() => {
     setSumItems(sumInCart(cardItems));
   }, [cardItems]);
 
-
   return (
     <div className={cartBlock.join(' ')} onClick={closeCart}>
-      <div className={cart.join(' ')} onClick={(e) => e.stopPropagation()}>
+      <div className={cart.join(' ')} onClick={e => e.stopPropagation()}>
         <h1>Корзина</h1>
         <div className={done.join(' ')}>
           {cardItems.length === 0 ? (
@@ -61,7 +59,7 @@ const Cart = () => {
           ) : (
             <div className={classes.cartItems}>
               <div className={classes.cartItem}>
-                {cardItems.map((el) => (
+                {cardItems.map(el => (
                   <CartItem key={el.id} item={el} />
                 ))}
               </div>
@@ -77,12 +75,12 @@ const Cart = () => {
               </div>
               <button onClick={clickedOrderDone} className={classes.cartBtn}>
                 Оформить заказ
-                <img src={arrowImg} alt="arrowImg" />
+                <img src={arrowImg} alt='arrowImg' />
               </button>
             </div>
           )}
-          </div>
-        {doneOrder && <FinishOrder closeCart={closeCart}/>}
+        </div>
+        {doneOrder && <FinishOrder closeCart={closeCart} />}
       </div>
     </div>
   );

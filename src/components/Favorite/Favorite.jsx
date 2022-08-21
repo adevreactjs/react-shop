@@ -1,20 +1,15 @@
-import React from 'react'
-import FavoriteItems from './FavoriteItems/FavoriteItems'
-import { useSelector, useDispatch } from 'react-redux';
-
+import React from 'react';
+import FavoriteItems from './FavoriteItems/FavoriteItems';
+import { useSelector } from 'react-redux';
 
 const Favorite = () => {
-
-  const favItems = useSelector((state) => state.getProduct.favoriteItems);
-
-  
-
+  const favItems = useSelector(state => state.getProduct.favoriteItems);
 
   return (
     <div>
-        <FavoriteItems favItems={favItems}/>
+      <FavoriteItems favItems={favItems} />
     </div>
-  )
-}
+  );
+};
 
-export default Favorite
+export default Favorite;

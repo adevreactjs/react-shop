@@ -11,9 +11,9 @@ const initialState = {
   favoriteItems: [],
   token: '',
   userName: {
-    username: "mor_23141",
-    password: "83r5^_1"
-},
+    username: 'mor_23141',
+    password: '83r5^_1',
+  },
   loading: true,
   status: null,
   error: null,
@@ -47,7 +47,7 @@ const storeItems = createSlice({
       state.cardItems.push(action.payload);
     },
     clearCard(state, action) {
-      state.cardItems = action.payload
+      state.cardItems = action.payload;
     },
     addFavoriteItems(state, action) {
       state.favoriteItems.push(action.payload);
@@ -58,12 +58,12 @@ const storeItems = createSlice({
     },
 
     filtFavoriteItems(state, action) {
-      const item = state.favoriteItems.filter((el) => el.id !== action.payload);
+      const item = state.favoriteItems.filter(el => el.id !== action.payload);
       state.favoriteItems = item;
     },
 
     deletedCardItems(state, action) {
-      const item = state.cardItems.filter((el) => el.id !== action.payload);
+      const item = state.cardItems.filter(el => el.id !== action.payload);
       state.cardItems = item;
     },
     searchProduct(state, action) {
@@ -74,18 +74,18 @@ const storeItems = createSlice({
     },
   },
   extraReducers: {
-    [fetchItems.pending]: (state) => {
+    [fetchItems.pending]: state => {
       state.status = 'loading';
       state.error = null;
     },
     [fetchItems.fulfilled]: (state, action) => {
       state.status = 'resolved';
       state.items = action.payload;
-      state.loading = false
+      state.loading = false;
     },
     [fetchItems.rejected]: (state, action) => {},
-    
-    [auth.pending]: (state) => {
+
+    [auth.pending]: state => {
       state.status = 'loading';
       state.error = null;
     },
@@ -93,7 +93,7 @@ const storeItems = createSlice({
     [auth.fulfilled]: (state, action) => {
       state.status = 'resolved';
       state.token = action.payload;
-      state.loading = false
+      state.loading = false;
     },
     [auth.rejected]: (state, action) => {},
   },

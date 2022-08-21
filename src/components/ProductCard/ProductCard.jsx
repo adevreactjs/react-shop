@@ -5,9 +5,9 @@ import addBtn from '../../img/addBtn.svg';
 import clickBtn from '../../img/clickAdd.svg';
 import offLike from '../../img/offLike.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { addBtnState, offBtnItems } from '../store/magazinSlice';
+import { addBtnState } from '../store/magazinSlice';
 
-export default function ({ items, getCard, addStateBtn, addTofav }) {
+export default function ProductCard({ items, getCard, addStateBtn, addTofav }) {
   const [add, setAddBtn] = React.useState(false);
   const [likeBtn, setOffBtn] = React.useState(false);
   const orderState = useSelector(state => state.getProduct.stateBtnOrder);

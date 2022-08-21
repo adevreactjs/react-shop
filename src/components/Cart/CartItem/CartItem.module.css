@@ -14,11 +14,10 @@
   margin-right: 21px;
   width: 50px;
   height: 60px;
-
 }
 .cart img:last-child {
-    margin-right: 0px;
-  }
+  margin-right: 0px;
+}
 .cartDescription {
   flex-grow: 1;
   display: flex;

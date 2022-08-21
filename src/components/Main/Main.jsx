@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { sortPrice } from '../store/magazinSlice';
 
 const Main = () => {
-  const items = useSelector((state) => state.getProduct.items);
+  const items = useSelector(state => state.getProduct.items);
   const dispatch = useDispatch();
 
   const [selectedSort, setSelectedSort] = React.useState('');
@@ -45,7 +45,7 @@ const Main = () => {
             <SortList
               value={selectedSort}
               onChange={sortCardItems}
-              defaultValue="Сортировка по"
+              defaultValue='Сортировка по'
               option={[
                 { value: 'hightPrice', name: 'Возростанию цены' },
                 { value: 'lowPrice', name: 'Убыванию цены' },

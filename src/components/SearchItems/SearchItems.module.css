@@ -1,5 +1,5 @@
 .search {
-    padding: 13px 18px;
+  padding: 13px 18px;
   max-width: 250px;
   border: 1px solid #f3f3f3;
   border-radius: 10px;
@@ -16,12 +16,12 @@
 }
 
 .search img {
-    margin-right: 14px;
+  margin-right: 14px;
   width: 14.25px;
   height: 14.25px;
 }
-  @media (max-width: 768px) {
-    .search {
-      display: flex;
-    }
+@media (max-width: 768px) {
+  .search {
+    display: flex;
   }
+}

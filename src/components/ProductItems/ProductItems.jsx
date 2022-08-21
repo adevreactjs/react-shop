@@ -1,22 +1,18 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  fetchItems,
-  addInCard,
-  addFavoriteItems,
-} from '../store/magazinSlice';
+import { fetchItems, addInCard, addFavoriteItems } from '../store/magazinSlice';
 
 import classes from './ProductItems.module.css';
 import ProductCard from '../ProductCard/ProductCard';
 import MyLoader from '../Loader/Loader';
 
 export default function ProductItems() {
-  const items = useSelector((state) => state.getProduct.items);
-  const searchQuery = useSelector((state) => state.getProduct.searchValue);
-  const cardItems = useSelector((state) => state.getProduct.cardItems);
-  const addStateBtn = useSelector((state) => state.getProduct.stateBtnProduct);
-  const favoriteItems = useSelector((state) => state.getProduct.favoriteItems);
-  const isLoadingState = useSelector((state) => state.getProduct.loading);
+  const items = useSelector(state => state.getProduct.items);
+  const searchQuery = useSelector(state => state.getProduct.searchValue);
+  const cardItems = useSelector(state => state.getProduct.cardItems);
+  const addStateBtn = useSelector(state => state.getProduct.stateBtnProduct);
+  const favoriteItems = useSelector(state => state.getProduct.favoriteItems);
+  const isLoadingState = useSelector(state => state.getProduct.loading);
 
   const dispatch = useDispatch();
 
@@ -51,8 +47,8 @@ export default function ProductItems() {
   return (
     <div className={classes.productBlock}>
       {isLoadingState
-        ? empryArr.map((el, ind) => <MyLoader key={ind}/>)
-        : search(items, searchQuery).map((item) => (
+        ? empryArr.map((el, ind) => <MyLoader key={ind} />)
+        : search(items, searchQuery).map(item => (
             <ProductCard
               key={item.id}
               items={item}
